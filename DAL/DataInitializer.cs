@@ -13,8 +13,8 @@ namespace PatientConsultationRecord.DAL
         {
             context.Users.Add(new Models.User()
             {
-                FirstName = "Bagong",
-                LastName = "Daan",
+                FirstName = "Joy",
+                LastName = "Flores",
                 Password = "admin",
                 UserName = "admin",
                 Sex = "male",
@@ -24,7 +24,7 @@ namespace PatientConsultationRecord.DAL
 
             context.Patients.Add(new Models.Patient()
             {
-                PatientID = Guid.Parse("56bac4c3-ef14-4f17-905d-5fb554063561"),
+                PatientID = Guid.Parse("56bac4c3-ef14-4f17-905d-5fb554063561"),     
                 FirstName = "Lolo",
                 LastName = "Mo",
                 Sex = "Male",

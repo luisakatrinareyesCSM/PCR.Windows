@@ -12,32 +12,30 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace PatientConsultationRecord.Patients
+namespace PatientConsultationRecord
 {
     /// <summary>
-    /// Interaction logic for addCosultation.xaml
+    /// Interaction logic for AddUser.xaml
     /// </summary>
-    public partial class addCosultation : Window
+    public partial class AddUser : Window
     {
-        private Guid? patId;
-        public addCosultation(Models.Patient consultation)
+        public AddUser()
         {
             InitializeComponent();
-
-            patId = consultation.PatientID;
+            cboGender.ItemsSource = new List<string>() { "Male", "Female" };
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var op = BLL.ConsultationBLL.Add(new Models.Consultation()
+            var op = BLL.UserBLL.Add(new Models.User()
             {
-                CreatedAt = DateTime.UtcNow,
-                ConsultationID = Guid.NewGuid(),
-                Descriptions = txtDesc.Text,
-                Medication = txtMed.Text,
-                PatientID = patId,
-                Results = txtRes.Text,
-                Symptoms = txtSymp.Text
+                
+                UserID = Guid.NewGuid(),
+                FirstName =txtFname.Text,
+                LastName = txtLname.Text,
+                UserName = txtUname.Text,
+                Password = txtPss.Text,
+                
 
             });
 
@@ -47,13 +45,17 @@ namespace PatientConsultationRecord.Patients
             }
             else
             {
-                MessageBox.Show("Consultation is successfully added");
+                MessageBox.Show("New User is successfully added");
+                MainWindow main = new MainWindow();
+                main.Show();
                 this.Close();
             }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            MainWindow main = new MainWindow();
+            main.Show();
             this.Close();
         }
     }

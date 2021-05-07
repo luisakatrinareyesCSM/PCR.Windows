@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PatientConsultationRecord.Patients"
         mc:Ignorable="d"
-        Title="addCosultation" Height="450" Width="800">
+        Title="addCosultation" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -23,8 +23,8 @@
         <TextBox x:Name="txtDesc" HorizontalAlignment="Left" Height="34" Margin="454,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236"/>
         <TextBox x:Name="txtRes" HorizontalAlignment="Left" Height="34" Margin="454,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236"/>
         <Label Content=" Add New Consultation" HorizontalAlignment="Left" Height="51" Margin="216,10,0,0" VerticalAlignment="Top" Width="501" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" FontFamily="Arial Black" FontSize="36"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="411,360,0,0" VerticalAlignment="Top" Width="85" Height="27" FontFamily="Arial Black"/>
-        <Button Content="Submit" HorizontalAlignment="Left" Margin="632,360,0,0" VerticalAlignment="Top" Width="85" Height="27" FontFamily="Arial Black" RenderTransformOrigin="0.779,0.696" Click="Button_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="421,341,0,0" VerticalAlignment="Top" Width="85" Height="27" FontFamily="Arial Black" Click="Button_Click_1"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="642,341,0,0" VerticalAlignment="Top" Width="85" Height="27" FontFamily="Arial Black" RenderTransformOrigin="0.779,0.696" Click="Button_Click"/>
         <Label x:Name="lblFullName" Content="Full Name" HorizontalAlignment="Left" Margin="24,214,0,0" VerticalAlignment="Top" Width="187" Height="40" FontFamily="Arial Black" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
 
     </Grid>

@@ -72,5 +72,82 @@ namespace PatientConsultationRecord.BLL
                 };
             }
         }
+        public static User GetById(Guid? id)
+        {
+            return db.Users.FirstOrDefault(e => e.UserID == id);
+        }
+
+        public static Operation Add(User user)
+        {
+            try
+            {
+                db.Users.Add(user);
+                db.SaveChanges();
+
+                return new Operation()
+                {
+                    Code = "200",
+                    Message = "Ok",
+                    ReferenceId = user.UserID
+                };
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "500",
+                    Message = e.Message
+                };
+            }
+        }
+
+        public static Operation Update(User newRecord)
+        {
+            try
+            {
+                User oldRecord = db.Users.FirstOrDefault(e => e.UserID == newRecord.UserID  );
+
+                if (oldRecord != null)
+                {
+
+
+                
+                    oldRecord.Password = newRecord.Password;
+
+
+
+
+
+                    db.SaveChanges();
+
+                    return new Operation()
+                    {
+                        Code = "200",
+                        Message = "OK"
+                    };
+                }
+
+
+                return new Operation()
+                {
+                    Code = "500",
+                    Message = "Not found"
+                };
+            }
+            catch (Exception e)
+            {
+                return new Operation()
+                {
+                    Code = "500",
+                    Message = e.Message
+                };
+            }
+        }
     }
+    
 }
+
+
+
+    
+

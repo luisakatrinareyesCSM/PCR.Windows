@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PatientConsultationRecord.Patients"
         mc:Ignorable="d"
-        Title="addpatient" Height="450" Width="800">
+        Title="addpatient" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -24,7 +24,7 @@
         <Label Content="year" HorizontalAlignment="Left" Height="33" Margin="600,226,0,0" VerticalAlignment="Top" Width="57" FontFamily="Arial Black"/>
         <Image HorizontalAlignment="Left" Height="158" Margin="27,35,0,0" VerticalAlignment="Top" Width="184" Source="/PatientConsultationRecord;component/loogoo.png" RenderTransformOrigin="0.451,0.881"/>
         <Label Content=" Add New Patient" HorizontalAlignment="Left" Height="51" Margin="216,10,0,0" VerticalAlignment="Top" Width="501" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" FontFamily="Arial Black" FontSize="36"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="393,384,0,0" VerticalAlignment="Top" Width="85" Height="27" FontFamily="Arial Black"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="393,384,0,0" VerticalAlignment="Top" Width="85" Height="27" FontFamily="Arial Black" Click="Button_Click_1"/>
         <Button Content="Submit" HorizontalAlignment="Left" Margin="608,384,0,0" VerticalAlignment="Top" Width="85" Height="27" FontFamily="Arial Black" Click="Button_Click"/>
         <ComboBox x:Name="txtSex" HorizontalAlignment="Left" Height="33" Margin="421,171,0,0" VerticalAlignment="Top" Width="236"/>
         <TextBox x:Name="txtyear" HorizontalAlignment="Left" Height="33" Margin="600,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.758,0.836"/>

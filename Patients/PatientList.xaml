@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PatientConsultationRecord.Patients"
         mc:Ignorable="d"
-        Title="PatientList" Height="450" Width="800">
+        Title="PatientList" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid AutomationProperties.IsOffscreenBehavior="Onscreen">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -17,7 +17,7 @@
             <ColumnDefinition Width="475*"/>
             <ColumnDefinition Width="319*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dgEmployees" HorizontalAlignment="Left" Height="119" Margin="35,203,0,0" VerticalAlignment="Top" Width="704" AutoGenerateColumns="False" CanUserAddRows="False" Grid.ColumnSpan="2" SelectionChanged="dgEmployees_SelectionChanged">
+        <DataGrid x:Name="dgEmployees" HorizontalAlignment="Left" Height="119" Margin="75,209,0,0" VerticalAlignment="Top" Width="704" AutoGenerateColumns="False" CanUserAddRows="False" Grid.ColumnSpan="2" SelectionChanged="dgEmployees_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="First Name"
                       Binding="{Binding FirstName}" Width="*" />
@@ -39,20 +39,20 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <ComboBox x:Name="cboSortOrder" HorizontalAlignment="Left" Margin="120.6,160,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboSortOrder_SelectionChanged" Grid.Column="1"/>
-        <Label x:Name="lblSortOrder" Content="Sort Order" HorizontalAlignment="Left" Height="29" Margin="52.6,159,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.783,0.576" Grid.Column="1"/>
-        <ComboBox x:Name="cboSortBy" HorizontalAlignment="Left" Margin="397,159,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboSortBy_SelectionChanged" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblSortBy" Content="Sort By" HorizontalAlignment="Left" Height="29" Margin="332,159,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.783,0.576"/>
-        <Button x:Name="btnFirst" Content="First" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="18" Margin="35,359,0,0" Click="btnFirst_Click"/>
-        <Button x:Name="btnLast" Content="Last" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="18" Margin="275,359,0,0" Click="btnLast_Click"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="18" Margin="195,359,0,0" RenderTransformOrigin="0.615,2.311" Click="btnNext_Click"/>
-        <Button x:Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="18" Margin="115,359,0,0" Click="btnPrevious_Click"/>
-        <TextBox x:Name="txtPageSize" Text="10" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Margin="115,382,0,0" TextChanged="txtPageSize_TextChanged"/>
-        <TextBox x:Name="txtKeyword" HorizontalAlignment="Left" Height="23" Margin="82,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" KeyDown="txtKeyword_KeyDown" RenderTransformOrigin="0.541,-0.697"/>
-        <Label x:Name="lblPageSize" Content="Page Size" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,382,0,0"/>
-        <Label x:Name="lblSortBy_Copy" Content="Search" HorizontalAlignment="Left" Height="29" Margin="35,159,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.783,0.576"/>
-        <Label Content="PCRS" HorizontalAlignment="Left" Height="81" Margin="233,18,0,0" VerticalAlignment="Top" Width="247" FontFamily="Arial Black" FontSize="72" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Background="{x:Null}" Grid.ColumnSpan="2"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="234,100,0,0" VerticalAlignment="Top" Height="9" RenderTransformOrigin="0.5,0.5" Width="495" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" Grid.ColumnSpan="2">
+        <ComboBox x:Name="cboSortOrder" HorizontalAlignment="Left" Margin="161,166,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboSortOrder_SelectionChanged" Grid.Column="1"/>
+        <Label x:Name="lblSortOrder" Content="Sort Order" HorizontalAlignment="Left" Height="29" Margin="93,165,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.783,0.576" Grid.Column="1"/>
+        <ComboBox x:Name="cboSortBy" HorizontalAlignment="Left" Margin="437,165,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboSortBy_SelectionChanged" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblSortBy" Content="Sort By" HorizontalAlignment="Left" Height="29" Margin="372,165,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.783,0.576"/>
+        <Button x:Name="btnFirst" Content="First" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="18" Margin="75,365,0,0" Click="btnFirst_Click"/>
+        <Button x:Name="btnLast" Content="Last" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="18" Margin="315,365,0,0" Click="btnLast_Click"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="18" Margin="235,365,0,0" RenderTransformOrigin="0.615,2.311" Click="btnNext_Click"/>
+        <Button x:Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="18" Margin="155,365,0,0" Click="btnPrevious_Click"/>
+        <TextBox x:Name="txtPageSize" Text="10" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Margin="113,388,0,0" TextChanged="txtPageSize_TextChanged"/>
+        <TextBox x:Name="txtKeyword" HorizontalAlignment="Left" Height="23" Margin="122,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" KeyDown="txtKeyword_KeyDown" RenderTransformOrigin="0.541,-0.697"/>
+        <Label x:Name="lblPageSize" Content="Page Size" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,388,0,0"/>
+        <Label x:Name="lblSortBy_Copy" Content="Search" HorizontalAlignment="Left" Height="29" Margin="75,165,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.783,0.576"/>
+        <Label Content="PCRS" HorizontalAlignment="Left" Height="81" Margin="273,24,0,0" VerticalAlignment="Top" Width="247" FontFamily="Arial Black" FontSize="72" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Background="{x:Null}" Grid.ColumnSpan="2"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="274,106,0,0" VerticalAlignment="Top" Height="9" RenderTransformOrigin="0.5,0.5" Width="495" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -62,7 +62,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Patient's Consultation Record System" HorizontalAlignment="Left" Margin="232,114,0,0" VerticalAlignment="Top" Width="506" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" FontFamily="Arial Black" FontSize="24" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Grid.ColumnSpan="2">
+        <Label Content="Patient's Consultation Record System" HorizontalAlignment="Left" Margin="272,120,0,0" VerticalAlignment="Top" Width="506" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" FontFamily="Arial Black" FontSize="24" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -72,7 +72,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Image HorizontalAlignment="Left" Height="158" Margin="23,0,0,0" VerticalAlignment="Top" Width="184" Source="/PatientConsultationRecord;component/loogoo.png"/>
-        <Button x:Name="btnAddpatient" Grid.ColumnSpan="2" Content="Add Patient" HorizontalAlignment="Left" Height="18" Margin="430,359,0,0" VerticalAlignment="Top" Width="147" Click="btnAddpatient_Click"/>
+        <Image HorizontalAlignment="Left" Height="158" Margin="63,6,0,0" VerticalAlignment="Top" Width="184" Source="/PatientConsultationRecord;component/loogoo.png"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="6,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Window>

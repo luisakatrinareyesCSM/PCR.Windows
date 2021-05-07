@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\admin\source\repos\PatientConsultationRecord\obj\Debug\
+C:\Users\admin\OneDrive\Documents\PCR\obj\Debug\
 PatientConsultationRecord
 none
 false
 DEBUG;TRACE
-C:\Users\admin\source\repos\PatientConsultationRecord\App.xaml
-7-1778526389
+C:\Users\admin\OneDrive\Documents\PCR\App.xaml
+9-993725315
 
-21-1980193437
-26-599676478
-MainWindow.xaml;Patients\addCosultation.xaml;Patients\addpatient.xaml;Patients\ConsultationList.xaml;Patients\Login.xaml;Patients\Patient Information.xaml;Patients\PatientList.xaml;
+24-2046630456
+26-1038420381
+AddUser.xaml;ChangePass.xaml;MainWindow.xaml;Patients\addCosultation.xaml;Patients\addpatient.xaml;Patients\ConsultationList.xaml;Patients\Login.xaml;Patients\Patient Information.xaml;Patients\PatientList.xaml;
 
 False
 

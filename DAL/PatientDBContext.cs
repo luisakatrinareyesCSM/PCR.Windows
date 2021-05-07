@@ -12,7 +12,7 @@ namespace PatientConsultationRecord.DAL
 
         public PatientDBContext() : base("myConnectionString")
         {
-             Database.SetInitializer(new DataInitializer());
+            // Database.SetInitializer(new DataInitializer());
         }
         public DbSet<Models.Consultation> Consultations { get; set; }
         public DbSet<Models.Patient> Patients { get; set; }

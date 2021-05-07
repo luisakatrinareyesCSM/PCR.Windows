@@ -26,5 +26,10 @@ namespace PatientConsultationRecord.Patients
             var conList = BLL.ConsultationBLL.List(consultation.PatientID);
             dgCons.ItemsSource = conList;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

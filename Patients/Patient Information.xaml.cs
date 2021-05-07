@@ -120,5 +120,18 @@ namespace PatientConsultationRecord.Patients
             ConsultationList conForm = new ConsultationList(patient);
             conForm.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            addpatient addpatient = new addpatient();
+            addpatient.Show();
+        }
     }
 }

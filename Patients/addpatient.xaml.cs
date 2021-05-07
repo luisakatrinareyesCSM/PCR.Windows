@@ -50,5 +50,10 @@ namespace PatientConsultationRecord.Patients
                 this.Close();
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

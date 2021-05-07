@@ -5,22 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PatientConsultationRecord"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="277*"/>
+            <ColumnDefinition Width="515*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
                 <GradientStop Color="#FF2F3B7A"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Content="PATIENT RECORD" HorizontalAlignment="Left" Height="49" Margin="421,221,0,0" VerticalAlignment="Top" Width="318" Click="Button_Click" FontFamily="Arial Black" FontSize="24" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.InfoBrushKey}}">
+        <Button Content="PATIENT RECORD" HorizontalAlignment="Left" Height="49" Margin="143.6,221,0,0" VerticalAlignment="Top" Width="318" Click="Button_Click" FontFamily="Arial Black" FontSize="24" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" Grid.Column="1">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Label Content="WELCOME!" HorizontalAlignment="Left" Height="65" Margin="21,250,0,0" VerticalAlignment="Top" Width="357" Background="Transparent" FontFamily="Arial Black" FontSize="48" Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-        <Label Content="PCRS" HorizontalAlignment="Left" Height="81" Margin="240,32,0,0" VerticalAlignment="Top" Width="247" FontFamily="Arial Black" FontSize="72" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Background="{x:Null}"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="241,114,0,0" VerticalAlignment="Top" Height="6" RenderTransformOrigin="0.5,0.5" Width="504" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
+        <Label Content="WELCOME!" HorizontalAlignment="Left" Height="65" Margin="21,250,0,0" VerticalAlignment="Top" Width="357" Background="Transparent" FontFamily="Arial Black" FontSize="48" Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Grid.ColumnSpan="2"/>
+        <Label Content="PCRS" HorizontalAlignment="Left" Height="81" Margin="240,32,0,0" VerticalAlignment="Top" Width="247" FontFamily="Arial Black" FontSize="72" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Background="{x:Null}" Grid.ColumnSpan="2"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="241,114,0,0" VerticalAlignment="Top" Height="6" RenderTransformOrigin="0.5,0.5" Width="504" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -30,7 +34,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Patient's Consultation Record System" HorizontalAlignment="Left" Margin="239,128,0,0" VerticalAlignment="Top" Width="506" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" FontFamily="Arial Black" FontSize="24" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+        <Label Content="Patient's Consultation Record System" HorizontalAlignment="Left" Margin="239,128,0,0" VerticalAlignment="Top" Width="506" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" FontFamily="Arial Black" FontSize="24" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -40,8 +44,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="0" Margin="263,320,0,0" VerticalAlignment="Top" Width="224"/>
-        <Button Content="PATIENT INFORMATION" HorizontalAlignment="Left" Height="49" Margin="419,304,0,0" VerticalAlignment="Top" Width="322" Click="Button_Click2" FontFamily="Arial Black" FontSize="24" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" RenderTransformOrigin="0.5,0.5">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="0" Margin="263,320,0,0" VerticalAlignment="Top" Width="224" Grid.ColumnSpan="2"/>
+        <Button Content="PATIENT INFORMATION" HorizontalAlignment="Left" Height="49" Margin="141.6,304,0,0" VerticalAlignment="Top" Width="322" Click="Button_Click2" FontFamily="Arial Black" FontSize="24" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -55,7 +59,9 @@
             </Button.Background>
         </Button>
         <Image HorizontalAlignment="Left" Height="158" Margin="21,32,0,0" VerticalAlignment="Top" Width="184" Source="loogoo.png"/>
-        <Button Content="Change passsword?" HorizontalAlignment="Left" Margin="12,391,0,0" VerticalAlignment="Top" Width="153" Background="#FF2F3B7A" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        <Button Content="Change passsword?" HorizontalAlignment="Left" Margin="12,391,0,0" VerticalAlignment="Top" Width="153" Background="#FF2F3B7A" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Click="Button_Click_2" />
+        <Button Content="Log Out?" HorizontalAlignment="Left" Margin="12,371,0,0" VerticalAlignment="Top" Width="153" Background="#FF2F3B7A" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Click="Button_Click_1"/>
+        <Button Content="Add User" HorizontalAlignment="Left" Margin="12,347,0,0" VerticalAlignment="Top" Width="153" Background="#FF2F3B7A" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Click="Button_Click_3"/>
 
     </Grid>
 </Window>

@@ -79,10 +79,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangePass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddUser.xaml.cs">
+      <DependentUpon>AddUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -90,6 +101,9 @@
     <Compile Include="BLL\ConsultationBLL.cs" />
     <Compile Include="BLL\PatientBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="ChangePass.xaml.cs">
+      <DependentUpon>ChangePass.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DAL\DataInitializer.cs" />
     <Compile Include="DAL\PatientDBContext.cs" />
     <Compile Include="Helpers\Operation.cs" />
@@ -125,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Consultation.cs" />
+    <Compile Include="Models\CurrentUser.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Patients\addCosultation.xaml.cs">

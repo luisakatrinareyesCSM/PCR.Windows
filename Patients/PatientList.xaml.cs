@@ -133,10 +133,13 @@ namespace PatientConsultationRecord.Patients
 
         }
 
-        private void btnAddpatient_Click(object sender, RoutedEventArgs e)
+        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            addpatient addpatient = new addpatient();
-            addpatient.Show();
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
         }
     }
 }
